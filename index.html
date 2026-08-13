@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Wallpaper Showcase</title>
+        <link rel="stylesheet" href="/src/style.css" />
+    </head>
+    <body class="min-h-screen flex flex-col font-sans">
+        <header
+            class="border-b border-purple-900/30 bg-[#120a1f]/80 backdrop-blur sticky top-0 z-50 px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-4"
+        >
+            <div class="flex items-center gap-4">
+                <h1
+                    class="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
+                >
+                    Wallpaper Showcase
+                </h1>
+                <a
+                    href="https://github.com/AbolfazlFa7/Wallpapers"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-purple-950/60 border border-purple-800/40 hover:border-purple-500/60 transition-all duration-300 text-sm text-purple-300 hover:text-white group"
+                >
+                    <svg
+                        class="w-4 h-4"
+                        viewBox="0 0 16 16"
+                        fill="currentColor"
+                    >
+                        <path
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                        />
+                    </svg>
+                    <span>AbolfazlFa7</span>
+                    <span
+                        id="repo-stars"
+                        class="flex items-center gap-1 text-amber-400"
+                    >
+                        <svg
+                            class="w-3.5 h-3.5"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                        >
+                            <path
+                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                            />
+                        </svg>
+                        <span id="star-count">...</span>
+                    </span>
+                </a>
+            </div>
+
+            <div
+                id="res-badge"
+                class="flex items-center gap-1.5 px-4 py-1.5 rounded-xl bg-purple-950/40 border border-purple-800/40 shadow-inner text-sm font-semibold tracking-wider text-purple-200 transition-all duration-300"
+            >
+                <span>1920</span>
+                <span class="text-purple-400 font-normal">×</span>
+                <span>1080</span>
+            </div>
+
+            <div
+                class="flex bg-purple-950/60 p-1 rounded-xl border border-purple-800/40"
+            >
+                <button
+                    id="tab-pc"
+                    class="px-4 py-1.5 rounded-lg text-sm font-medium transition-all"
+                >
+                    PC Wallpapers
+                </button>
+                <button
+                    id="tab-phone"
+                    class="px-4 py-1.5 rounded-lg text-sm font-medium transition-all"
+                >
+                    Phone Wallpapers
+                </button>
+            </div>
+        </header>
+
+        <main class="flex-1 w-full mx-auto p-6 md:p-10">
+            <div id="gallery" class="w-full"></div>
+
+            <div
+                id="pagination"
+                class="flex justify-center items-center gap-4 mt-12"
+            ></div>
+        </main>
+
+        <!-- FOOTER with Copy All Links button -->
+        <footer
+            class="border-t border-purple-900/30 bg-[#120a1f]/60 backdrop-blur mt-8 py-8 px-4"
+        >
+            <div class="max-w-4xl mx-auto">
+                <div
+                    class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-4"
+                >
+                    <!-- Left group: text + star button -->
+                    <div
+                        class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 flex-1"
+                    >
+                        <p class="text-purple-200/80 text-sm sm:text-base">
+                            <span class="text-amber-400">❤️</span> If you like
+                            this work, please give a star on GitHub!
+                        </p>
+                        <a
+                            href="https://github.com/AbolfazlFa7/Wallpapers"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white text-sm font-semibold rounded-xl shadow-lg shadow-purple-950/50 hover:shadow-purple-600/40 border border-purple-400/30 transition-all duration-200 active:scale-95"
+                        >
+                            <svg
+                                class="w-5 h-5"
+                                viewBox="0 0 16 16"
+                                fill="currentColor"
+                            >
+                                <path
+                                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                                />
+                            </svg>
+                            ⭐ Star on GitHub
+                        </a>
+                    </div>
+                    <!-- Right: Copy All Links button -->
+                    <button
+                        id="copy-all-btn"
+                        class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white text-sm font-semibold rounded-xl shadow-lg shadow-cyan-950/50 hover:shadow-cyan-600/40 border border-cyan-400/30 transition-all duration-200 active:scale-95 whitespace-nowrap flex-shrink-0"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="w-5 h-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"
+                            />
+                        </svg>
+                        Copy All Links
+                    </button>
+                </div>
+                <!-- Credit line -->
+                <p class="text-purple-400/60 text-xs sm:text-sm text-center">
+                    all credit goes to
+                    <a
+                        href="https://github.com/AbolfazlFa7"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-purple-300 hover:text-purple-200 transition-colors font-medium"
+                    >
+                        AbolfazlFa7
+                    </a>
+                </p>
+            </div>
+        </footer>
+
+        <!-- POPUP - Star Reminder -->
+        <div
+            id="star-popup"
+            class="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-[999] px-4 hidden"
+        >
+            <div
+                class="bg-[#1a1128] border border-purple-500/50 rounded-2xl max-w-md w-full p-8 text-center animate-fade-in shadow-2xl shadow-purple-900/30"
+            >
+                <div class="text-5xl mb-3">⭐</div>
+                <h2
+                    class="text-2xl font-bold bg-gradient-to-r from-amber-400 to-yellow-500 bg-clip-text text-transparent mb-2"
+                >
+                    Support This Project
+                </h2>
+                <p class="text-purple-200/80 text-sm leading-relaxed mb-6">
+                    This project has been worked hard. If you enjoy these
+                    wallpapers,<br />
+                    please give a
+                    <strong class="text-amber-400">star</strong> on GitHub — it
+                    means a lot!
+                </p>
+                <a
+                    href="https://github.com/AbolfazlFa7/Wallpapers"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    id="star-popup-github-link"
+                    class="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-400 hover:to-yellow-400 text-black font-bold rounded-xl transition-all duration-200 shadow-lg shadow-amber-900/30"
+                >
+                    <svg
+                        class="w-5 h-5"
+                        viewBox="0 0 16 16"
+                        fill="currentColor"
+                    >
+                        <path
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                        />
+                    </svg>
+                    ⭐ Star on GitHub
+                </a>
+                <button
+                    id="popup-close"
+                    class="block mx-auto mt-4 text-purple-400/60 hover:text-purple-300 text-sm transition-colors"
+                >
+                    maybe later
+                </button>
+            </div>
+        </div>
+
+        <!-- COPY POPUP - Show after star popup action -->
+        <div
+            id="copy-popup"
+            class="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center z-[1000] px-4 hidden"
+        >
+            <div
+                class="bg-[#1a1128] border border-cyan-500/50 rounded-2xl max-w-lg w-full p-8 text-center animate-fade-in shadow-2xl shadow-cyan-900/30"
+            >
+                <div class="text-5xl mb-3">📋</div>
+                <h2
+                    class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2"
+                >
+                    Copy All Image Links
+                </h2>
+                <div
+                    class="bg-purple-950/60 rounded-xl p-4 mb-6 border border-purple-800/40"
+                >
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="text-purple-300">Total Images:</span>
+                        <span class="text-white font-bold" id="copy-total-count"
+                            >0</span
+                        >
+                    </div>
+                    <div class="flex justify-between items-center text-sm mt-2">
+                        <span class="text-purple-300">Total Size:</span>
+                        <span class="text-white font-bold" id="copy-total-size"
+                            >0 MB</span
+                        >
+                    </div>
+                </div>
+                <p class="text-purple-200/70 text-sm leading-relaxed mb-6">
+                    This will copy all
+                    <span id="copy-count-text" class="text-cyan-400 font-bold"
+                        >0</span
+                    >
+                    image links to your clipboard, one per line.
+                </p>
+                <button
+                    id="copy-action-btn"
+                    class="inline-flex items-center gap-3 px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-bold rounded-xl transition-all duration-200 shadow-lg shadow-cyan-900/30 active:scale-95"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-5 h-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"
+                        />
+                    </svg>
+                    🌈 Copy All Links
+                </button>
+                <button
+                    id="copy-popup-close"
+                    class="block mx-auto mt-4 text-purple-400/60 hover:text-purple-300 text-sm transition-colors"
+                >
+                    close
+                </button>
+            </div>
+        </div>
+
+        <script type="module" src="/src/main.js"></script>
+    </body>
+</html>
