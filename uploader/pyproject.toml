@@ -1,0 +1,10 @@
+[project]
+name = "wallpaper-uploader"
+version = "0.1.0"
+description = "Recursive wallpaper and image uploader and tracker with duplicate prevention and retry queue."
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "colorama>=0.4.6",
+    "requests>=2.34.2",
+]
