@@ -6,7 +6,7 @@
 
 ![Desktop Resolution](https://img.shields.io/badge/Desktop-1920×1080-blue)
 ![Phone Resolution](https://img.shields.io/badge/Phone-1080×2400-green)
-![Total Wallpapers](https://img.shields.io/badge/Wallpapers-500+-orange)
+![Total Wallpapers](https://img.shields.io/badge/Wallpapers-200+-orange)
 ![Sources](https://img.shields.io/badge/Sources-100+-red)
 ![License](https://img.shields.io/badge/License-Personal%20Use-purple)
 
