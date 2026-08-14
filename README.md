@@ -1,6 +1,6 @@
 # 🌟 Wallpaper Showcase
 
-<a href="https://abolfazlfa7.github.io/Wallpapers/">
+<a href="https://abolfazlfa7.github.io/Wallpapers/" target="_blank">
   <img width="1920" height="972" alt="Site Preview" src="https://github.com/user-attachments/assets/e70d6d6f-b154-4b6c-a2df-d2f72ab88585" />
 </a>
 
@@ -52,10 +52,10 @@ Welcome to my personal curated wallpaper collection! Every single image here has
 ## 🚀 Quick Start
 
 Visit the live showcase to browse and view all wallpapers:  
-🔗 **[Wallpaper Showcase](https://abolfazlfa7.github.io/Wallpapers/)**
+🔗 <a href="https://abolfazlfa7.github.io/Wallpapers/" target="_blank">Wallpaper Showcase</a>
 
 You can also explore the source code and contribute:  
-📁 **[GitHub Repository](https://github.com/AbolfazlFa7/Wallpapers/)**
+📁 <a href="https://github.com/AbolfazlFa7/Wallpapers/" target="_blank">GitHub Repository</a>
 
 ---
 
@@ -78,3 +78,7 @@ This collection is for personal use. All wallpapers belong to their respective c
 If you like this work, please give it a star! ⭐
 
 I have put a lot of effort into this project. Over the years, I have carefully curated and selected the best wallpapers from more than 100 different sources. Your support by starring this project motivates me to continue improving and expanding this collection!
+
+<a href="https://github.com/AbolfazlFa7/Wallpapers" target="_blank">
+  <img src="https://img.shields.io/github/stars/AbolfazlFa7/Wallpapers?style=social" alt="GitHub stars" />
+</a>
