@@ -252,6 +252,10 @@ async function downloadImage(url, filename = "wallpaper.jpg") {
 
 function updateBadge() {
     if (!resBadgeEl) return;
+    const dataset = currentTab === "pc" ? pcData : phoneData;
+    const items = Array.isArray(dataset) ? dataset : dataset?.items || [];
+    document.getElementById("total-count-badge").textContent = items.length;
+
     if (currentTab === "pc") {
         resBadgeEl.innerHTML = `<span>1920</span><span class="text-purple-400 font-normal">×</span><span>1080</span>`;
     } else {
