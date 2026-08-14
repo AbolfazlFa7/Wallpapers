@@ -6,7 +6,7 @@ from colorama import init, Fore
 sys.path.append(str(Path(__file__).parent.parent.absolute()))
 
 from src.hash_util import compute_sha256
-from src.storage import load_full_db, append_to_full_db, update_short_db
+from src.storage import load_full_db, save_full_db, append_to_full_db, update_short_db
 from src.freeimage_host.client import FreeImageHostClient
 
 init(autoreset=True)
@@ -107,11 +107,24 @@ def main():
         files_in_folder = {compute_sha256(p) for p in target.rglob("*") if p.is_file() and p.suffix.lower() in {".jpg", ".jpeg", ".png", ".webp", ".gif", ".bmp"}}
         full_db = load_full_db(device_type)
         missing_files = [i for i in full_db if i.get("sha256") not in files_in_folder]
-        print(Fore.CYAN + f"Files in DB ({device_type.upper()}) not present in folder '{target.name}':")
-        for m in missing_files:
-            filename = m.get('image', {}).get('filename', 'unknown')
-            sha = m.get('sha256', 'unknown')
-            print(f"  {Fore.YELLOW}- {filename} {Fore.RESET}-> {Fore.GREEN}`{sha}`")
+        
+        if missing_files:
+            print(Fore.CYAN + f"Files in DB ({device_type.upper()}) not present in folder '{target.name}':")
+            for m in missing_files:
+                filename = m.get('image', {}).get('filename', 'unknown')
+                sha = m.get('sha256', 'unknown')
+                print(f"  {Fore.YELLOW}- {filename} {Fore.RESET}-> {Fore.GREEN}`{sha}`")
+            
+            choice = input(Fore.YELLOW + "Do you wanna sync db with this folder? (y/n): " + Fore.RESET).strip().lower()
+            if choice == 'y':
+                updated_db = [i for i in full_db if i.get("sha256") in files_in_folder]
+                save_full_db(device_type, updated_db)
+                update_short_db(device_type)
+                print(Fore.GREEN + "Database successfully synced with the folder.")
+            else:
+                print(Fore.CYAN + "Operation cancelled. Database not changed.")
+        else:
+            print(Fore.LIGHTGREEN_EX + f"All files in the database are present in the folder '{target.name}'! Everything is up to date.")
         return
 
     if target.is_file():
