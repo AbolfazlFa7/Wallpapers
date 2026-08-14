@@ -40,12 +40,12 @@ Welcome to my personal curated wallpaper collection! Every single image here has
 
 ## 📊 Collection Stats
 
-| Icon                                                             | Stat                        | Value         |
-| ---------------------------------------------------------------- | --------------------------- | ------------- |
-| <img src="https://img.icons8.com/color/24/000000/image.png"/>    | **Total Wallpapers**        | 500+          |
-| <img src="https://img.icons8.com/color/24/000000/books.png"/>    | **Sources Curated**         | 100+          |
-| <img src="https://img.icons8.com/color/24/000000/database.png"/> | **Total Size (Compressed)** | ~200MB        |
-| <img src="https://img.icons8.com/color/24/000000/calendar.png"/> | **Last Updated**            | February 2026 |
+| Icon                                                             | Stat                 | Value       |
+| ---------------------------------------------------------------- | -------------------- | ----------- |
+| <img src="https://img.icons8.com/color/24/000000/image.png"/>    | **Total Wallpapers** | 100+        |
+| <img src="https://img.icons8.com/color/24/000000/books.png"/>    | **Sources Curated**  | 100+        |
+| <img src="https://img.icons8.com/color/24/000000/database.png"/> | **Total Size**       | ~50MB       |
+| <img src="https://img.icons8.com/color/24/000000/calendar.png"/> | **Last Updated**     | August 2026 |
 
 ---
 
